@@ -50,7 +50,7 @@ public class NumArray {
      * @param val 修改值
      */
 
-    void private update(SegmentTreeNode root, int pos, int val){
+    private void update(SegmentTreeNode root, int pos, int val){
         if (root.start == root.end){
             root.sum = val;
         }else{
