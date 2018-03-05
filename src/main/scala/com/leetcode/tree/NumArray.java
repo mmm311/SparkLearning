@@ -69,7 +69,7 @@ public class NumArray {
            int mid = (root.start + root.end) / 2;
            if (end <= mid){
               return sumRange(root.left, start, end);
-           }else if( mid + 1 <= start){
+           }else if( start <= mid + 1){
                return sumRange(root.right, start, end);
            }else {
                return sumRange(root.left, start, mid) + sumRange(root.right, mid + 1, end);
