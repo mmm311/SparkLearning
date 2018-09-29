@@ -9,7 +9,7 @@ object AFTSurvivalRegressionExample {
     val spark = SparkSession
       .builder
       .appName("AFTSurvivalRegressionExample")
-      .master("local")
+      .master("local[0]")
       .getOrCreate()
 
     val training = spark.createDataFrame(Seq(

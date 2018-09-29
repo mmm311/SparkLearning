@@ -8,4 +8,6 @@ class SparkGenerator {
     .appName(s"${this.getClass.getSimpleName}")
     .master("local")
 
+
+
 }

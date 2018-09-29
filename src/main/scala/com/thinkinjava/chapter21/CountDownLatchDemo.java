@@ -1,8 +1,5 @@
 package com.thinkinjava.chapter21;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-import scala.tools.cmd.gen.AnyVals;
-
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

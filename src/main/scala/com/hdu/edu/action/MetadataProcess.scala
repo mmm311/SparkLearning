@@ -20,7 +20,6 @@ object MetadataProcess {
 //        fields(0).replace("-", "") + "\t" + fields(1).replace("-", "")
 //      }
 //    }.saveAsTextFile("E:\\data\\metadata-processed")
-
     val graph = GraphLoader.edgeListFile(sc, "E:\\data\\metadata-processed")
     val ranks = graph.pageRank(0.0001).vertices
     val entities = sc.textFile("E:\\data\\metadata-lookup").map{ line =>
