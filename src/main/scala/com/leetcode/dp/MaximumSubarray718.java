@@ -40,8 +40,8 @@ public class MaximumSubarray718 {
     }
 
     public static void main(String[] args){
-        int []A = {0, 1, 1, 1, 1};
-        int []B = {1, 0};
+        int []A = {2, 4, 3, 1, 2, 1};
+        int []B = {1, 2, 3, 2, 4, 1, 2};
 
         findLength(A, B);
     }
