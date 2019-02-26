@@ -26,7 +26,7 @@ object BroadcastTest {
       val observedSizes = sc.parallelize(1 to 10, slice)
         .map(_ => barr1.value.length)
 
-      observedSizes.collect().foreach(i => println(i))
+      observedSizes.repartition(2).coalesce(1).collect().foreach(i => println(i))
       println("Iteration %d took %.0f milliseconds".format(i, (System.nanoTime() - startTime) /1E6))
     }
     spark.stop()

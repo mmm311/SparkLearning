@@ -5,8 +5,6 @@ package com.thinkinjava.chapter21.shuyu;
  * 银行出纳员仿真
  */
 
-import akka.util.Timeout;
-
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;

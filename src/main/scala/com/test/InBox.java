@@ -1,23 +1,24 @@
 package com.test;
 
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.TreeMap;
+import java.io.*;
 
 public class InBox {
-    public static void main(String[] args) {
-        Hashtable<String, String> hashtable = new Hashtable<>();
-        TreeMap<String, String> treeMap = new TreeMap<>();
-        HashSet<String> set = new HashSet<>();
-        HashMap<String, String> map = new HashMap<>();
-        map.put("123", "123");
-        map.put("123", "123");
-        set.add("123");
-        set.add("123");
-        System.out.println(set.size());
+    public static void main(String[] args) throws Exception {
+        String line = null;
+        try {
+            String[] cmd = {"cmd", "/C", "echo hello "};
+            Process process = Runtime.getRuntime().exec(cmd);
 
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
+            bw.write("dir");
+            BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 }

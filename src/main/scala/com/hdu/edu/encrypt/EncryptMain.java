@@ -1,6 +1,5 @@
 package com.hdu.edu.encrypt;
 
-import org.dmg.pmml.True;
 
 import java.io.RandomAccessFile;
 import java.util.concurrent.CountDownLatch;
@@ -19,7 +18,6 @@ public class EncryptMain {
         long start = System.currentTimeMillis();
         ExecutorService service = Executors.newFixedThreadPool(cores);
         CountDownLatch latch = new CountDownLatch(cores);
-
         RandomAccessFile accessFile = new RandomAccessFile(path, "rw");
         int length =(int) accessFile.length();
         int size = length / cores;
