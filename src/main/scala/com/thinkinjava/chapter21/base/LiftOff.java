@@ -1,7 +1,6 @@
 package com.thinkinjava.chapter21.base;
 
 import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
-import org.dmg.pmml.True;
 
 import java.io.File;
 
