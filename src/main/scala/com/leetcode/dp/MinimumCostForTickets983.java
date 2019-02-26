@@ -2,6 +2,7 @@ package com.leetcode.dp;
 
 /**
  * @author liu
+ *
  */
 public class MinimumCostForTickets983 {
     public int mincostTickets(int[] days, int[] costs) {
